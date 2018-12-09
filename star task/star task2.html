@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ghost Button</title>
+  <!-- 你也可以使用<style>标签把CSS代码放在这里。-->
+   <style>
+   .button{
+     width:130px;
+     height:130px;
+     border:solid 2px white;
+     border-radius:50%;
+     position:relative
+     cursor: pointer;
+   }
+   
+   
+   .button a{
+     color:white;
+     text-decoration:none;
+     font-size:20px;
+
+     position: absolute;
+     top: 40%;
+     left:10%;
+}
+   .button:hover{
+  border: solid 2px lightblue;
+  background: white;
+}
+
+  span:hover{
+    color: grey;
+  }
+
+.button:hover a{
+  /*对背景进行渐变操作：linear表示线性渐变，
+    left top，right top指的是渐变方向，左上到右上
+    color-stop函数，第一个表示渐变的位置，0为起点，1为结束点；第二个表示该点的颜色*/
+    background: -webkit-gradient(linear, left top, right top, 
+    color-stop(0, lightblue), 
+    color-stop(.4, lightblue),
+    color-stop(.5, white), 
+    color-stop(.6, lightblue), 
+    color-stop(1, lightblue));
+  /* 把背景除了文字外的部分都裁剪掉，并将字体颜色设为transparent透明 */
+    -webkit-background-clip: text;
+    color:transparent;
+  /* 每隔2秒调用动画text  infinite表明这个动画循环进行 */
+    -webkit-animation: text 2s infinite;
+    text-align: center;
+}
+
+
+/* 创建这个动画text 将背景从-100px的水平位置，移动到+100px的水平位置*/
+@keyframes text {
+  from {
+    background-position: -100px;}
+  to {
+    background-position: 100x;} 
+}
+.button:before {
+  display: block; /* 设置成块级元素来设置长宽 */
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-sizing: border-box; /* 防止边框撑开盒子的大小 */
+  content: '';
+}
+
+.button:hover:before{
+  border: dashed 3px lightblue;
+  animation: whirl 9s linear infinite;
+}
+
+@keyframes whirl{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  background:linear-gradient(white,rgb(169, 214, 230),rgb(127, 206, 233));
+  background-repeat: no-repeat;
+  background-size: 10000px;
+  text-align: center;
+}
+
+div{
+  position: relative;
+  top:50%;
+  left:50;
+}
+
+   </style>
+</head>
+<body>
+<!-- 主要代码编写区域，我们要实现的按钮就写在这里 -->
+   <div class="button">
+     <a href="http://muxistudio.com/" >
+        MuxiStudio
+        <span> › </span>
+     </a>
+   </div>
+</body>
+</html>

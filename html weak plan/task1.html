@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            table,th,td{
+                border:1px solid black;
+            }
+
+            table{
+                border-collapse:collapse;
+            }
+
+            .first{
+                background-color: rgb(223, 219, 219);
+            }
+
+            .second{
+                background-color: rgb(223, 219, 219);
+            }
+
+            .third{
+                background-color: rgb(223, 219, 219);
+            }
+
+            .forth{
+                background-color: rgb(223, 219, 219);
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>运费详情</caption>
+            <!--表头-->
+            <thead>
+                <tr class="first">
+                    <th>区域</th>
+                    <th>寄达地</th>
+                    <th>首重（元/1000g）</th>
+                    <th>续重（元/1000g）</th>
+                </tr>
+            </thead>
+            <!--表身-->
+            <tbody>
+                <!--第一行-->
+                <tr>
+                    <td class="second" rowspan="2">一区</td>
+                    <td>浙江、上海、江苏</td>
+                    <td>6</td>
+                    <td>1</td>
+                    
+                </tr>
+                
+                <!--第二行-->
+                <tr>
+                    <td>江西、安徽</td>
+                    <td>7</td>
+                    <td>1</td>
+                </tr>
+
+                <!--第三行-->
+                <tr>
+                    <td class="third">二区</td>
+                    <td>吉林、黑龙江、云南</td>
+                    <td>10</td>
+                    <td>6</td>
+                </tr>
+
+                <!--第四行-->
+                <tr>
+                    <td class="forth">三区</td>
+                    <td>新疆、西藏</td>
+                    <td>15</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+<!--存有很多问题：1、背景灰色代码不够简洁 2、外形不够美观，文字和边框距离太近  明天记得改改改-->

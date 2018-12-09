@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        h1{
+            background: gray;
+            
+        }
+        #son2{
+            background:forestgreen;
+            width: 200px;
+            height: 50px;
+        }
+        #son3{
+            background: red;
+            width: 200px;
+            
+        }
+        #son4{
+            background: pink;
+            width: 170px;
+            height: 50px;
+        }
+        #son5{
+            background: yellow;
+        }
+        #son2,#son3,#son4{
+            display: inline-block;
+            margin: 0;
+            float: left;    
+        }
+        #son2,#son4{
+            padding-top:0;
+        }
+        #father{
+            overflow: hidden;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>这里是标题</h1>
+        <div id="father">
+        <div id="son2">侧边栏2</div>
+        <div id="son3">
+            <strong> 
+                <p>这里是一些文字</p>
+                <p>再来一大段文字</p>
+                <p>地图投影</p>
+            </strong>
+           
+        </div>
+        <div id="son4">侧边栏</div>
+        </div>
+        <div id="son5">没人关注的页脚</div>
+    </body>
+</html>

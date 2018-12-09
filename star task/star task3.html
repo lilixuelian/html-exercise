@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>task3</title>
+        <style>
+            body {
+                background: #000041
+            }
+            .outside{
+                border:1px solid lightgrey;
+                width:100px;
+                height: 100px;
+                border-radius: 50%;
+                vertical-align: middle;
+                position:relative;
+            }
+            .inside{
+                background: lightgrey;
+                width:80px;
+                height: 80px;
+                border-radius: 50%;
+                position: absolute;
+                top:10px;
+                left:10px;
+            }
+            .right{
+                color:lightgrey;
+                width:100px;
+                text-align: center;
+            }
+            div {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left">
+            <div class="outside">
+                <div class="inside"></div>
+            </div>
+        <div class="right">ABC123</div>
+        </div>
+    </body>
+</html>
